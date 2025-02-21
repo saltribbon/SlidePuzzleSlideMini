@@ -8,7 +8,7 @@
 		((t=n/z|0)-(s=h/z|0))||(p.splice(h,1),p.splice(h=n,0,"x"));
 		if(/x/.test(f)){
 			f.splice(s,1),f.splice(t,0,"x");
-			for(i=n%z;i<Z;i+=z)p[i]=f[i/3|0];
+			for(i=n%z;i<Z;i+=z)p[i]=f[i/z|0];
 			h=n
 		}
 		D.innerHTML=p.map((v,i)=>`${i%z?"":"<br>"}<button onclick=m(${i})>${v}</button>`).join``
