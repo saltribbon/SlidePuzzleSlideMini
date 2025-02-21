@@ -1,0 +1,16 @@
+<style>button{font-size:50;width:100;height:100</style>
+<body id=D><script>
+	z=3,Z=z*z,h=Z-1;
+	for(p="x",i=h;i;p=[i--,...p]);
+	for(i=0;i<2*Z;i+=r-t?1:0)[p[r],p[t]]=[p[t=new Date%h],p[r=new Date%h]];
+	m=n=>{
+		f=p.filter((_,i)=>i%z==n%z);
+		((t=n/z|0)-(s=h/z|0))||(p.splice(h,1),p.splice(h=n,0,"x"));
+		if(/x/.test(f)){
+			f.splice(s,1),f.splice(t,0,"x");
+			for(i=n%z;i<Z;i+=z)p[i]=f[i/3|0];
+			h=n
+		}
+		D.innerHTML=p.map((v,i)=>`${i%z?"":"<br>"}<button onclick=m(${i})>${v}</button>`).join``
+	};m()
+</script>
